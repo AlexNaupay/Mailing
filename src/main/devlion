@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "creating resources/META-INF"
+
+mkdir resources/META-INF
+
+echo "generating webapp structure"
+
+mkdir webapp
+mkdir webapp/resources
+mkdir webapp/WEB-INF
+
+touch webapp/WEB-INF/web.xml
+
+mkdir webapp/WEB-INF/spring
+mkdir webapp/WEB-INF/spring/appServlet
+touch webapp/WEB-INF/spring/appServlet/servlet-context.xml
+
+touch webapp/WEB-INF/spring/root-context.xml
+
+mkdir webapp/WEB-INF/views
+
