@@ -1,5 +1,4 @@
-package pe.com.devteam;
-
+package pe.com.devteam.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +12,7 @@ import java.util.Locale;
 @Controller
 public class HomeController {
 
+    
     /**
      * Simply selects the home view to render by returning its name.
      */

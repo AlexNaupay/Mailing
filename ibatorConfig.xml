@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration >
+	<classPathEntry location='/home/alexh/.m2/repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar'/>
+  	
+  	<ibatorContext id="context1" targetRuntime="Ibatis2Java5" defaultModelType="conditional">
+  
+  	
+  
+  	<ibatorPlugin type="org.apache.ibatis.ibator.plugins.EqualsHashCodePlugin" />
+	
+	<ibatorPlugin type="org.apache.ibatis.ibator.plugins.RenameExampleClassPlugin">
+		<property name="searchString" value="Example$"/>
+		<property name="replaceString" value="Criteria"/>
+	</ibatorPlugin>
+	
+	<commentGenerator>
+		<property name="suppressDate" value="true"/>
+	</commentGenerator>
+  
+  
+  
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/joedayz_angular"
+    	userId="alexh" password="_alexh" />
+    <javaModelGenerator targetPackage="pe.com.devteam.bean" targetProject="MailingProject" />
+    <sqlMapGenerator targetPackage="pe.com.devteam.dao.ibatis.mappers" targetProject="MailingProject" />
+    <daoGenerator targetPackage="pe.com.devteam.dao" targetProject="SpringMVC" type="MailingProject"
+    implementationPackage="pe.com.devteam.dao.ibatis"/>
+    
+    
+    <table tableName="business" domainObjectName="Business">
+      <property name="joedayz_angular" value="business"/>
+    </table>
+    
+    <table tableName="companies" domainObjectName="Company">
+      <property name="joedayz_angular" value="companies"/>
+    </table>
+    
+    <table tableName="campaigns" domainObjectName="Campaign">
+      <property name="joedayz_angular" value="campaigns"/>
+    </table>
+    
+    <table tableName="emails" domainObjectName="Email">
+      <property name="joedayz_angular" value="emails"/>
+    </table>
+    
+    
+    
+  </ibatorContext>
+</ibatorConfiguration>

@@ -1,0 +1,12 @@
+<!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+        "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+    <settings useStatementNamespaces="true" lazyLoadingEnabled="true" enhancementEnabled="true" maxSessions="128"/>
+
+    <sqlMap resource="pe/com/devteam/dao/ibatis/mappers/business_SqlMap.xml"/>
+    <sqlMap resource="pe/com/devteam/dao/ibatis/mappers/companies_SqlMap.xml"/>
+    <sqlMap resource="pe/com/devteam/dao/ibatis/mappers/campaigns_SqlMap.xml"/>
+    <sqlMap resource="pe/com/devteam/dao/ibatis/mappers/emails_SqlMap.xml"/>
+
+</sqlMapConfig>

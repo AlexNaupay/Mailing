@@ -16,6 +16,7 @@ Servers/
 
 /**/target/
 
+/src/main/webapp/WEB-INF/spring/appData/app-data.xml
 # Eclipse
 /**/.settings/
 /**/*.project
