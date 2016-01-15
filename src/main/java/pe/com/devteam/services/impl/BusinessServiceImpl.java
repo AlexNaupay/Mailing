@@ -24,6 +24,8 @@ public class BusinessServiceImpl implements BusinessService{
     public List<Business> findAll(Business business) throws SQLException {
         BusinessCriteria businessCriteria = new BusinessCriteria();
         BusinessCriteria.Criteria criteria = businessCriteria.createCriteria();
+        
+        criteria.andStateIdEqualTo(1);
 
         if (business != null && business.getName() != null)
             criteria.andNameLike(business.getName());

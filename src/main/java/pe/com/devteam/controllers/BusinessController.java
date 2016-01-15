@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -26,6 +27,24 @@ public class BusinessController {
 
         try {
             map.put("data", businessService.findAll(business));
+            map.put("error", 0);
+
+            return map;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            map.put("error", 1);
+            return map;
+        }
+
+    }
+	
+	@RequestMapping("/business/{id}")
+    public  @ResponseBody Map<String, Object> show(@PathVariable("id") int id) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        try {
+            map.put("data", businessService.findById(id));
             map.put("error", 0);
 
             return map;
