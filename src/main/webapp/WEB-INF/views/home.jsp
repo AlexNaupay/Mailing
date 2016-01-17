@@ -25,7 +25,7 @@
     <footer class='black'>
         <div class='container'>
 	        <p class="pull-right"><a href="#">Back to top</a></p>
-	        <p>© 2015 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+	        <p>© 2016 devteam Inc . </p>
         </div>
      </footer>
     <%-- /footer --%>
@@ -48,6 +48,6 @@
     <script src="<c:url value="/resources/applications/business/services/business-services.js"/>"></script>
     <script src="<c:url value="/resources/applications/business/controllers/business-controller.js"/>"></script>
     <script src="<c:url value="/resources/applications/business/controllers/business-grid-controllers.js"/>"></script>
-    <script src="<c:url value="/resources/applications/business/business.js"/>"></script>
+    <script src="<c:url value="/resources/applications/business/business-app.js"/>"></script>
 </body>
 </html>

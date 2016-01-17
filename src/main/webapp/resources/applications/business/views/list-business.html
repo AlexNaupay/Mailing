@@ -26,10 +26,10 @@
 	            <td>{{ bus.id }}</td>
 	            <td>{{ bus.name }}</td>
 	            <td>{{ bus.description }}</td>
-	            <td>{{ bus.createdAt | date:'dd/MMMM/yyyy HH:mm:ss' }}</td>
+	            <td>{{ bus.createdAt | date:'dd/MM/yyyy HH:mm:ss' }}</td>
 	            <td>
 	                <a href="#/business/{{ bus.id }}" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i></a>
-	                <a href="#" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+	                <button data-ng-click="delete(bus.id)" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
 	            </td>
 	        </tr>
 	    </tbody>

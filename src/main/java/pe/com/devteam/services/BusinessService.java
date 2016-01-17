@@ -11,4 +11,6 @@ public interface BusinessService {
 
     List<Business> findAll(Business business) throws SQLException;
 
+    Business saveOrUpdate(Business business) throws SQLException;
+
 }

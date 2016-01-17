@@ -6,8 +6,10 @@ import pe.com.devteam.bean.Business;
 import pe.com.devteam.bean.BusinessCriteria;
 import pe.com.devteam.dao.BusinessDAO;
 import pe.com.devteam.services.BusinessService;
+import pe.com.devteam.utils.Constants;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -25,7 +27,7 @@ public class BusinessServiceImpl implements BusinessService{
         BusinessCriteria businessCriteria = new BusinessCriteria();
         BusinessCriteria.Criteria criteria = businessCriteria.createCriteria();
         
-        criteria.andStateIdEqualTo(1);
+        criteria.andStateEqualTo(1);
 
         if (business != null && business.getName() != null)
             criteria.andNameLike(business.getName());
@@ -35,5 +37,23 @@ public class BusinessServiceImpl implements BusinessService{
 
 
         return businessDAO.selectByExample(businessCriteria);
+    }
+
+    @Override
+    public Business saveOrUpdate(Business business) throws SQLException {
+        if (business != null && business.getId() == 0){
+            business.setCreatedAt(new Date());
+            business.setUpdatedAt(new Date());
+            business.setState(Constants.ENTITY_ENABLED);
+
+            businessDAO.insertSelective(business);  // selective: fill only if not null attribute
+        }else if (business != null && business.getId() != null) {
+            business.setUpdatedAt(new Date());
+            businessDAO.updateByPrimaryKeySelective(business);  // selective: undate only fill attibute
+        }else{
+        	throw new SQLException ("I can not save");
+        }
+
+        return business;
     }
 }

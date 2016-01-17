@@ -23,5 +23,15 @@
 
     <!-- scan into package recursive -->
     <context:component-scan base-package="pe.com.devteam" />
+    
+    
+    <beans:bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- max upload size in bytes 20MB -->
+        <!--<beans:property name="maxUploadSize" value="${file.max.upload.size}" />  -->
 
+        <!-- max size of file in memory (in bytes) 1MB -->
+        <!--<beans:property name="maxInMemorySize" value="${file.max.upload.in.memory}" /> -->
+    </beans:bean>
+	
 </beans:beans>

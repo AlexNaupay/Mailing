@@ -22,7 +22,7 @@
             <li><a href="#">Generación de Campaña</a></li>
             <li><a href="#">Seguimiento de Correo</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Subir correos</a></li>
+            <li><a href="/mailing/mailhome">Subir correos</a></li>
           </ul>
         </li>
       </ul>
@@ -41,11 +41,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimientos<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="/mailing/companies">Companies</a></li>
+            <li><a href="/mailing/business">Business</a></li>
           </ul>
         </li>
       </ul>

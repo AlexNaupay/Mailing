@@ -1,0 +1,22 @@
+
+<div class="container">
+	<div class="col-md-4">
+	    <label for="company-select"></label>
+	    <select id="company-select" ng-model="companySelect" ng-change="change">
+	        <option ng-repeat="company in allCompanies" value="{{company.id}}">{{company.name}}</option>
+	    </select>
+	
+	    <label for="business-select"></label>
+	    <select id="business-select" ng-model="businessSelect" ng-change="change()">
+	        <option ng-repeat="bus in allBusiness" value="{{bus.id}}">{{bus.name}}</option>
+	    </select>
+	
+	    <p class="alert alert-warning">{{countEmail}} con esta combinación</p>
+	
+	</div>
+	
+	
+	<div class="col-md-8">
+	
+	</div>
+</div>

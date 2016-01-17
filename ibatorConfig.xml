@@ -20,11 +20,11 @@
   
   
   
-    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/joedayz_angular"
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/sender"
     	userId="alexh" password="_alexh" />
-    <javaModelGenerator targetPackage="pe.com.devteam.bean" targetProject="MailingProject" />
-    <sqlMapGenerator targetPackage="pe.com.devteam.dao.ibatis.mappers" targetProject="MailingProject" />
-    <daoGenerator targetPackage="pe.com.devteam.dao" targetProject="SpringMVC" type="MailingProject"
+    <javaModelGenerator targetPackage="pe.com.devteam.bean" targetProject="mailing" />
+    <sqlMapGenerator targetPackage="pe.com.devteam.dao.ibatis.mappers" targetProject="mailing" />
+    <daoGenerator targetPackage="pe.com.devteam.dao" targetProject="mailing" type="spring"
     implementationPackage="pe.com.devteam.dao.ibatis"/>
     
     
